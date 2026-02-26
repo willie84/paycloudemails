@@ -4,7 +4,7 @@ from datetime import datetime
 
 st.set_page_config(page_title="Paycloud – Sign Up", page_icon="☁️", layout="centered")
 
-WEBHOOK_URL = "https://nairobiaicommunity.app.n8n.cloud/webhook/758e61f2-7f1a-440c-903f-b2e9e606fb0f"
+WEBHOOK_URL = "https://nairobiaicommunity.app.n8n.cloud/webhook/myduka-signup"
 
 st.markdown("""
 <style>
@@ -169,9 +169,9 @@ with st.container():
                     st.error(e)
             else:
                 payload = {
-                    "full_name": name.strip(),
+                    "name": name.strip(),
                     "email": email.strip(),
-                    "phone": phone.strip(),
+                    "username": email.strip(),
                     "password": password,
                     "registered_at": datetime.utcnow().isoformat() + "Z",
                 }
